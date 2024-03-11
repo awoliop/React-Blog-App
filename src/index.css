@@ -29,6 +29,7 @@ input {
   height: 35px;
   text-indent: 10px;
   margin-left: 10px;
+  outline: none;
 }
 input::placeholder {
   font-size: 16px;
@@ -37,13 +38,12 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: stretch;
-  /* border: 1px solid red; */
   width: 100%;
   height: 100%;
   list-style-type: none;
 }
 
-a {
+ul a {
   color: white;
   text-decoration: none;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -64,7 +64,7 @@ form {
   display: flex;
 }
 
-.app_continer {
+.app_container {
   margin: auto;
   /* width: 70%; */
 }
@@ -77,4 +77,64 @@ form {
   position: absolute;
   bottom: 0px;
   width: 100%;
+}
+
+.route-components {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post_list {
+  border: 1px solid rgb(189, 236, 236);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 7px;
+  background-color: azure;
+  color: black;
+}
+
+li div {
+  margin-top: 5px;
+}
+
+.post_button {
+  border: none;
+  background-color: antiquewhite;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+article a {
+  text-decoration: none;
+}
+
+article {
+  /* background-color: azure; */
+  border-bottom: 2px solid grey;
+}
+
+.delete_button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.go_back_button {
+  margin-top: 20px;
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
 }

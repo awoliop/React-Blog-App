@@ -1,8 +1,8 @@
 import React from "react";
 
-const NewPost = () => {
+const NewPost = ({ posts }) => {
   return (
-    <main>
+    <main className="route-components">
       <h1>New-Post</h1>
     </main>
   );

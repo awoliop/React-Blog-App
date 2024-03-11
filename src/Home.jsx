@@ -1,11 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "./index.css";
+import Feed from "./Feed";
 
-const Home = () => {
+const Home = ({ posts }) => {
   return (
-    <main>
-      <Link to="/">Home</Link>
-      <h1>Home</h1>
+    <main className="Home">
+      {posts.length ? (
+        <Feed posts={posts} />
+      ) : (
+        <p style={{ marginTop: "2rem" }}>No post to display</p>
+      )}
     </main>
   );
 };

@@ -16,13 +16,13 @@ const Nav = ({ search, setSearch }) => {
       </form>
       <ul>
         <li>
-          <Link to="/home">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/posts">NewPosts</Link>
+          <Link to="/posts">New-Posts</Link>
         </li>
         <li>
-          <Link to="/postPage">Post Page</Link>
+          <Link to="/post/:id">Post Page</Link>
         </li>
         <li>
           <Link to="/about">About</Link>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Missing = () => {
   return (
-    <main>
+    <main className="route-components">
       <h1>404 : Not Found</h1>
       {/* no need to reload from server, react will do its magic this way!!(🔥🔥 dont forget to import upthere!!) */}
       <Link to="/">Header</Link>
