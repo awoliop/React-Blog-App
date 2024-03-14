@@ -1,27 +1,38 @@
+body {
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+}
+
 * {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .Header {
+  position: fixed;
+  top: 0px;
   background-color: aqua;
   padding: 10px;
+  width: inherit;
 }
-label {
+.nav_label {
   position: absolute;
   left: -99999999px;
 }
 
 .Nav {
-  /* border: 1px solid black; */
   background-color: rgb(43, 40, 40);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 30px; */
-  /* border: 1px solid red; */
+  position: fixed;
+  top: 100px;
+  width: 83%;
 }
-input {
+.nav_input {
   height: 67%;
   align-self: center;
   border-radius: 7px;
@@ -63,10 +74,12 @@ li :hover {
 form {
   display: flex;
 }
-
+.content {
+  margin-top: 170px;
+}
 .app_container {
   margin: auto;
-  /* width: 70%; */
+  width: 80%;
 }
 
 .footer {
@@ -74,9 +87,9 @@ form {
   padding-left: 10px;
   /* padding: 5px; */
   font-size: 14px;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
-  width: 100%;
+  width: inherit;
 }
 
 .route-components {
@@ -137,4 +150,74 @@ article {
   color: white;
   padding: 12px;
   border-radius: 5px;
+}
+
+.post_main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+.post_form {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-weight: bold;
+}
+
+.post_label {
+  color: black;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.post_input {
+  height: 50px;
+  border: 1.5px solid bla ck;
+  border-radius: 10px;
+  font-size: 18px;
+  text-indent: 10px;
+  outline: none;
+}
+.post_textarea {
+  border: 1.5px solid black;
+  outline: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+  text-indent: 10px;
+}
+
+.post_button {
+  margin-top: 20px;
+  padding: 10px;
+  color: white;
+  background-color: black;
+}
+
+.missing_main {
+  display: flex;
+  flex-direction: column;
+}
+
+.foooter_paragraph {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer_main {
+  display: flex;
+  flex-direction: column;
+}
+
+.editpost_notFound {
+  display: flex;
+  flex-direction: colmn;
+}
+
+.about_main {
+  display: flex;
+  flex-direction: column;
 }

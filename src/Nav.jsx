@@ -5,8 +5,11 @@ const Nav = ({ search, setSearch }) => {
   return (
     <nav className="Nav">
       <form action="" onSubmit={(event) => event.preventDefault()}>
-        <label htmlFor="Search">Search Posts</label>
+        <label htmlFor="Search" className="nav_label">
+          Search Posts
+        </label>
         <input
+          className="nav_input"
           type="text"
           id="search"
           placeholder="Search Posts"
@@ -19,11 +22,9 @@ const Nav = ({ search, setSearch }) => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/posts">New-Posts</Link>
+          <Link to="/posts">Post</Link>
         </li>
-        <li>
-          <Link to="/post/:id">Post Page</Link>
-        </li>
+
         <li>
           <Link to="/about">About</Link>
         </li>

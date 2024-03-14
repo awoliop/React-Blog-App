@@ -4,7 +4,7 @@ const Footer = () => {
   const date = new Date();
   return (
     <footer className="footer">
-      <h1>CopyRight &copy; {date.getFullYear()}</h1>
+      <p className="foooter_paragraph">CopyRight &copy; {date.getFullYear()}</p>
     </footer>
   );
 };
