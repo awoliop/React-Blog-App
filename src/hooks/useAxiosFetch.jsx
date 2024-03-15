@@ -27,7 +27,11 @@ const useAxiosFetch = (dataURL) => {
           setData([]);
         }
       } finally {
-        isMounted && setIsLoading(false);
+        // you won't need the timeOut function in real apps ...this is just to see if the loading message shows up!1!!
+        isMounted &&
+          setTimeout(() => {
+            setIsLoading(false);
+          }, 2000);
       }
     };
     fetchData(dataURL);

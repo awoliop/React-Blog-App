@@ -8,10 +8,11 @@ import PostPage from "./PostPage";
 import About from "./About";
 import Missing from "./Missing";
 import Footer from "./Footer";
+import EditPost from "./EditPost";
+import axios from "axios";
+
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import EditPost from "./EditPost";
 import useWindowSize from "./hooks/useWindowSize";
 import useAxiosFetch from "./hooks/useAxiosFetch";
 
@@ -27,7 +28,7 @@ function App() {
   // destructured to be used as the return from the custom hook is an object of width and height as properties!!
   const { width } = useWindowSize();
   const { data, isLoading, FetchError } = useAxiosFetch(
-    "http://localhost:3500"
+    "http://localhost:3500/posts"
   );
 
   // useEffect(() => {
@@ -133,7 +134,16 @@ function App() {
           <Nav search={search} setSearch={setSearch} />
           <div className="content">
             <Routes>
-              <Route path="/" element={<Home posts={searchResult} />} />
+              <Route
+                path="/"
+                element={
+                  <Home
+                    posts={searchResult}
+                    isLoading={isLoading}
+                    FetchError={FetchError}
+                  />
+                }
+              />
               <Route
                 path="/posts"
                 element={
@@ -181,4 +191,5 @@ export default App;
 
 //⬇️⬇️⬇️
 // Install the Axios Library and this Should be fine!!
+
 //⬆️⬆️⬆️
